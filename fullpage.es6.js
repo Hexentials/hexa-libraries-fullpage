@@ -623,7 +623,7 @@
           link = options.anchors[i];
         }
 
-        var li = '<li><a href="#' + link + '"><span></span></a>';
+        var li = '<li><a href="#' + link + '"aria-label="' + link + '"><span></span></a>';
         var tooltip = options.navigationTooltips[i];
 
         if (typeof tooltip !== 'undefined' && tooltip !== '') {
@@ -1748,7 +1748,7 @@
       nav.addClass(options.slidesNavPosition);
 
       for (var i = 0; i < numSlides; i++) {
-        nav.find('ul').append('<li><a href="#"><span></span></a></li>');
+        nav.find('ul').append('<li><a href="#" aria-label=""><span></span></a></li>');
       }
 
       nav.css('margin-left', '-' + nav.width() / 2 + 'px');
