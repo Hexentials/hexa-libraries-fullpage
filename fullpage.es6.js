@@ -90,6 +90,7 @@
       lockAnchors: false,
       navigation: false,
       navigationPosition: 'right',
+      navigationFormat: 'circle',
       navigationTooltips: [],
       showActiveTooltip: false,
       slidesNavigation: false,
@@ -623,7 +624,7 @@
           link = options.anchors[i];
         }
 
-        var li = '<li><a href="#' + link + '"aria-label="' + link + '"><span></span></a>';
+        var li = '<li><a href="#' + link + '"aria-label="' + link + '"><span class="fp-' + options.navigationFormat + '"></span></a>';
         var tooltip = options.navigationTooltips[i];
 
         if (typeof tooltip !== 'undefined' && tooltip !== '') {
