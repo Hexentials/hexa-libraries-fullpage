@@ -90,6 +90,7 @@
       lockAnchors: false,
       navigation: false,
       navigationPosition: 'right',
+      navigationFormat: 'circle',
       navigationTooltips: [],
       showActiveTooltip: false,
       slidesNavigation: false,
@@ -610,7 +611,7 @@
     }
 
     function addVerticalNavigation() {
-      $body.append('<div id="' + SECTION_NAV + '"><ul></ul></div>');
+      $body.append('<div id="' + SECTION_NAV + '"><ul class="fp-' + options.navigationFormat + '"></ul></div>');
       var nav = $(SECTION_NAV_SEL);
       nav.addClass(function () {
         return options.showActiveTooltip ? SHOW_ACTIVE_TOOLTIP + ' ' + options.navigationPosition : options.navigationPosition;
