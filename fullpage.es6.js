@@ -611,7 +611,7 @@
     }
 
     function addVerticalNavigation() {
-      $body.append('<div id="' + SECTION_NAV + '"><ul></ul></div>');
+      $body.append('<div id="' + SECTION_NAV + '"><ul class="fp-' + options.navigationFormat + '"></ul></div>');
       var nav = $(SECTION_NAV_SEL);
       nav.addClass(function () {
         return options.showActiveTooltip ? SHOW_ACTIVE_TOOLTIP + ' ' + options.navigationPosition : options.navigationPosition;
@@ -624,7 +624,7 @@
           link = options.anchors[i];
         }
 
-        var li = '<li><a href="#' + link + '"aria-label="' + link + '"><span class="fp-' + options.navigationFormat + '"></span></a>';
+        var li = '<li><a href="#' + link + '"aria-label="' + link + '"><span></span></a>';
         var tooltip = options.navigationTooltips[i];
 
         if (typeof tooltip !== 'undefined' && tooltip !== '') {
