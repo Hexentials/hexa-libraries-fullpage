@@ -50,7 +50,7 @@
   var SECTION_NAV_TOOLTIP = 'fp-tooltip';
   var SECTION_NAV_TOOLTIP_SEL = '.' + SECTION_NAV_TOOLTIP;
   var SHOW_ACTIVE_TOOLTIP = 'fp-show-active';
-  var SLIDE_DEFAULT_SEL = '.slide';
+  var SLIDE_DEFAULT_SEL = '.slide-element';
   var SLIDE = 'fp-slide';
   var SLIDE_SEL = '.' + SLIDE;
   var SLIDE_ACTIVE_SEL = SLIDE_SEL + ACTIVE_SEL;
