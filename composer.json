@@ -1,0 +1,7 @@
+{
+  "name": "hexentials/hexa-libraries",
+  "description": "Fullpage Libraries for Hexentials core profile.",
+  "type": "drupal-custom-theme-library",
+  "homepage": "https://www.drupal.org/project/hexa-libraries",
+  "license": "GPL-2.0-or-later"
+}
