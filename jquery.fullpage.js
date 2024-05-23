@@ -60,7 +60,7 @@
     var SHOW_ACTIVE_TOOLTIP =   'fp-show-active';
 
     // slide
-    var SLIDE_DEFAULT_SEL =     '.slide';
+    var SLIDE_DEFAULT_SEL =     '.slide-element';
     var SLIDE =                 'fp-slide';
     var SLIDE_SEL =             '.' + SLIDE;
     var SLIDE_ACTIVE_SEL =      SLIDE_SEL + ACTIVE_SEL;
@@ -106,6 +106,7 @@
             lockAnchors: false,
             navigation: false,
             navigationPosition: 'right',
+            navigationFormat: 'circle',
             navigationTooltips: [],
             showActiveTooltip: false,
             slidesNavigation: false,
@@ -807,7 +808,7 @@
         * Creates a vertical navigation bar.
         */
         function addVerticalNavigation(){
-            $body.append('<div id="' + SECTION_NAV + '"><ul></ul></div>');
+            $body.append('<div id="' + SECTION_NAV + '"><ul class="fp-' + options.navigationFormat + '"></ul></div>');
             var nav = $(SECTION_NAV_SEL);
 
             nav.addClass(function() {
@@ -820,7 +821,7 @@
                     link = options.anchors[i];
                 }
 
-                var li = '<li><a href="#' + link + '"><span></span></a>';
+                var li = '<li><a href="#' + link + '"aria-label="' + link + '"><span></span></a>';
 
                 // Only add tooltip if needed (defined by user)
                 var tooltip = options.navigationTooltips[i];
@@ -2361,7 +2362,7 @@
             nav.addClass(options.slidesNavPosition);
 
             for(var i=0; i< numSlides; i++){
-                nav.find('ul').append('<li><a href="#"><span></span></a></li>');
+                nav.find('ul').append('<li><a href="#" aria-label=""><span></span></a></li>');
             }
 
             //centering it
